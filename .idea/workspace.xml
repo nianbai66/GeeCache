@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6dcbea8-4094-41f8-8e5b-2d2d18b2fd26" name="更改" comment="proto毕" />
+    <list default="true" id="b6dcbea8-4094-41f8-8e5b-2d2d18b2fd26" name="更改" comment="1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +33,7 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2qyfENrjumj3pXEt4qHxER5wlrj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,10 +49,10 @@
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "Shell Script.run.sh.executor": "Run",
-    "git-widget-placeholder": "test",
+    "git-widget-placeholder": "正在合并 main",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu-24.04/home/go/go_projects",
+    "last_opened_file_path": "E:/Users/abc/Desktop/go/GeeCache",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -146,7 +147,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="proto毕" />
-    <option name="LAST_COMMIT_MESSAGE" value="proto毕" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
