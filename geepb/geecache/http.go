@@ -48,6 +48,7 @@ func (p *HTTPPool) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if !strings.HasPrefix(r.URL.Path, p.basePath) {
 		panic("HTTPPool serving unexpected path: " + r.URL.Path)
 	}
+
 	//格式为/<basepath>/<groupname>/<key>
 	p.Log("%s %s", r.Method, r.URL.Path)
 	//从basepath后面取出按/划分的字符串，是两个

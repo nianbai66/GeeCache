@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6dcbea8-4094-41f8-8e5b-2d2d18b2fd26" name="更改" comment="1">
-      <change beforePath="$PROJECT_DIR$/.idea/GeeCache.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GeeCache.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geepb/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/http.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
