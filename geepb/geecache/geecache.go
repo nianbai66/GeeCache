@@ -2,10 +2,10 @@ package geecache
 
 import (
 	"fmt"
-	pb "geecache/geecachepb"
 	"geecache/singleflight"
 	"log"
 	"sync"
+	"time"
 )
 
 // 接口
@@ -31,9 +31,12 @@ type Group struct {
 	//本地主缓存
 	mainCache cache
 	//选择节点
-	peers PeerPicker
+	//peers Picker
 	//每个key只访问一次
 	loader *singleflight.Group
+	//这个缓存池所有的数据的过期时间
+	Expire time.Duration
+	server Picker
 }
 
 // 两个全局变量，锁和多个单机缓存池的map
@@ -42,7 +45,7 @@ var (
 	groups = make(map[string]*Group)
 )
 
-func NewGroup(name string, cacheBytes int64, getter Getter) *Group {
+func NewGroup(name string, cacheBytes int64, expire time.Duration, getter Getter) *Group {
 	if getter == nil {
 		panic("nil Getter")
 	}
@@ -54,6 +57,7 @@ func NewGroup(name string, cacheBytes int64, getter Getter) *Group {
 		//构造一个单机缓存池只用传缓存池大小
 		mainCache: cache{cacheBytes: cacheBytes},
 		loader:    &singleflight.Group{},
+		Expire:    expire,
 	}
 	groups[name] = g
 	return g
@@ -68,11 +72,11 @@ func GetGroup(name string) *Group {
 
 // s实现了 PeerPicker 接口的 HTTPPool 注入到 Group 中
 // 为创建的缓存池注册一个PeerPicker（选择节点） 实例，就可以在本地找不到时，选择服务器
-func (g *Group) RegisterPeers(peers PeerPicker) {
-	if g.peers != nil {
+func (g *Group) RegisterPeers(peers Picker) {
+	if g.server != nil {
 		panic("RegisterPeerPicker called more than once")
 	}
-	g.peers = peers
+	g.server = peers
 }
 
 // group中的get方法
@@ -94,10 +98,12 @@ func (g *Group) Get(key string) (ByteView, error) {
 func (g *Group) load(key string) (value ByteView, err error) {
 	//使用do函数，让key只去查询一次远程和获取一次远程的值
 	view, err := g.loader.Do(key, func() (interface{}, error) {
-		if g.peers != nil {
-			if peer, ok := g.peers.PickerPeer(key); ok {
-				if value, err = g.getFromPeer(peer, key); err == nil {
-					return value, nil
+		if g.server != nil {
+			// 返回rpc客户端
+			if peer, ok := g.server.Pick(key); ok {
+				// 使用客户端与rpc服务端连接，调用rpc方法
+				if bytes, err := peer.Fetch(g.name, key); err == nil {
+					return ByteView{cloneBytes(bytes)}, nil
 				}
 				log.Println("[GeeCache] Failed to get from peer", err)
 			}
@@ -112,25 +118,25 @@ func (g *Group) load(key string) (value ByteView, err error) {
 }
 
 // 使用实现了 PeerGetter 接口的 httpGetter 从访问远程节点，获取缓存值
-func (g *Group) getFromPeer(peer PeerGetter, key string) (ByteView, error) {
-	req := &pb.Request{
-		Group: g.name,
-		Key:   key,
-	}
-	res := &pb.Response{}
-	err := peer.Get(req, res)
-	if err != nil {
-		return ByteView{}, err
-	}
-	return ByteView{b: res.Value}, nil
-	// bytes, err := peer.Get(g.name, key)
-	// if err != nil {
-	// 	return ByteView{}, err
-	// }
-	// return ByteView{b: bytes}, nil
-}
+//func (g *Group) getFromPeer(peer Picker, key string) (ByteView, error) {
+//	req := &pb.Request{
+//		Group: g.name,
+//		Key:   key,
+//	}
+//	res := &pb.Response{}
+//	err := peer.Get(req, res)
+//	if err != nil {
+//		return ByteView{}, err
+//	}
+//	return ByteView{b: res.Value}, nil
+//	// bytes, err := peer.Get(g.name, key)
+//	// if err != nil {
+//	// 	return ByteView{}, err
+//	// }
+//	// return ByteView{b: bytes}, nil
+//}
 
-// 未命中从数据源的get中获取key的值
+// 未命中从数据源的get中获取key的值，缓存到本地
 func (g *Group) getLocally(key string) (ByteView, error) {
 	bytes, err := g.getter.Get(key)
 	if err != nil {
@@ -144,7 +150,7 @@ func (g *Group) getLocally(key string) (ByteView, error) {
 
 }
 
-// 添加到主缓存池中
+// 添加到主缓存池中,也要加入传给缓存池的过期时间
 func (g *Group) populateCache(key string, value ByteView) {
-	g.mainCache.add(key, value)
+	g.mainCache.add(key, value, g.Expire)
 }

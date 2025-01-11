@@ -4,16 +4,73 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6dcbea8-4094-41f8-8e5b-2d2d18b2fd26" name="更改" comment="1">
+    <list default="true" id="5fa8f448-9592-4966-a411-6786d7dc2366" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/arc/arc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/geecachepb/gocachepb_grpc.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/highperformance/hash.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/highperformance/tool.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/registry/discover.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/registry/registry.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/simplelfu/lfu.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/simplelfu/lfu_interface.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/simplelfu/lfu_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/simplelru/lru.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/simplelru/lru_interface.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/simplelru/lru_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geepb/geecache/uitls.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GeeCache.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GeeCache.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/remote-targets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geepb/geecache/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/http.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/byteview.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/byteview.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/cache.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/geecache.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/geecache.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/geecache_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/geecache_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/geecachepb/geecachepb.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/geecachepb/geecachepb.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/geecachepb/geecachepb.proto" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/geecachepb/geecachepb.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/hash/consistenthash.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/hash/consistenthash.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/hash/consistenthash_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/hash/consistenthash_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/http.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/lru/lru.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/lru/lru.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/lru/lru_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/lru/lru_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/peers.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/peers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/geecache/singleflight/singleflight.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/geecache/singleflight/singleflight.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geepb/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/geepb/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/geecache/byteview.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/geecache/byteview.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/geecache/cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/geecache/cache.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/geecache/geecache.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/geecache/geecache.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/geecache/geecache_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/geecache/geecache_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/geecache/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/http/geecache/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/geecache/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/geecache/http.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/geecache/lru/lru.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/geecache/lru/lru.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/geecache/lru/lru_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/geecache/lru/lru_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/http/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/http/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="GOROOT" url="file://D:/Program Files/Go" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -29,74 +86,47 @@
     &quot;accountId&quot;: &quot;34839948-732b-4498-9c15-76cdab7b50e2&quot;
   }
 }</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+    <option name="useGoPathFromSystemEnvironment" value="false" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2qyfENrjumj3pXEt4qHxER5wlrj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2rD0jRbYJDDC5i6er5L8ons8tBv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Go 构建.go build GeeCache/.executor&quot;: &quot;Run&quot;,
-    &quot;Go 构建.go build main.go.executor&quot;: &quot;Run&quot;,
-    &quot;Go 构建.go build test.go.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;Shell Script.run.sh.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Users/abc/Desktop/go/GeeCache&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Runtime.Targets.Configurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "configurable..is.expanded": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu-24.04/home/go/GeeCache",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "go.vgo"
   }
-}</component>
-  <component name="RunManager" selected="Go 构建.go build main.go">
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="GeeCache" />
-      <working_directory value="$PROJECT_DIR$/multi-node" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/multi-node/main.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="run.sh" type="ShConfigurationType" temporary="true">
-      <option name="SCRIPT_TEXT" value="" />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/multi-node/run.sh" />
-      <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="false" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="//wsl.localhost/Ubuntu-24.04/home/go/go_projects" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="false" />
-      <option name="INTERPRETER_PATH" value="$PROJECT_DIR$/multi-node/main.go" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="EXECUTE_IN_TERMINAL" value="true" />
-      <option name="EXECUTE_SCRIPT_FILE" value="true" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Go 构建.go build main.go" />
-      <item itemvalue="Shell Script.run.sh" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Shell Script.run.sh" />
-        <item itemvalue="Go 构建.go build main.go" />
-      </list>
-    </recent_temporary>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-24.04\home\go\GeeCache\geepb\geecache\geecachepb" />
+      <recent name="\\wsl.localhost\Ubuntu-24.04\home\go\GeeCache\geepb\geecache" />
+      <recent name="\\wsl.localhost\Ubuntu-24.04\home\go\GeeCache\geepb\geecache\highperformance" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-24.04\home\go\GeeCache\geepb\geecache\geecachepb" />
+      <recent name="\\wsl.localhost\Ubuntu-24.04\home\go\GeeCache\geepb\geecache\hash" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -109,37 +139,6 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="test" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="proto毕" />
-    <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
